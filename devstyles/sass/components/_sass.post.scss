@@ -1,0 +1,90 @@
+.post{
+	padding: 4em;
+	line-height: 1.5;
+	
+	::selection{
+		background-color: rgb(18,133,33);
+		color: #fff;
+	}
+
+	h1, h2, h3, h4, h5, h6{
+		padding: 1rem 0;
+	}
+	h1{
+		font-size: 4em;
+		font-weight: bold;
+		text-shadow: 1px 1px rgba(0,0,0,0.2);
+	}
+	h2{
+		font-size: 2em;
+
+	}
+
+	h3{
+		font-size: 1.5em;
+
+	}
+	p{
+		padding: 0 0 1em 0;
+
+		a{
+		color: rgb(18,133,33);
+	}
+	a:hover{
+		background-color: rgb(227,240,187);
+	}
+	}
+
+	code{
+		font-family: monospace;
+		font-size: 1.1em;
+		color: rgb(18,133,33);
+		padding: .25em;
+		background-color: rgba(18,133,33,0.1);
+	}
+
+	
+}
+
+.post-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.post-text{
+	max-width: 65%;
+}
+.post-toc{
+	color: rgb(18,133,33);
+	order: 2;
+	width: 30%;
+	padding: 2em 4em;
+	background-color: rgba(18,133,33, 0.1);
+	border: 1px solid rgba(18,133,33, 0.4);
+
+	border-radius: 0.5em;
+
+	a{
+		color: rgb(18,133,33);
+	}
+	ul{
+		list-style-type: circle;
+	}
+	p{
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.post-content{
+		flex-direction: column;
+	}
+	.post-text{
+		max-width: 100%;
+	}
+	.post-toc{
+		order: 0;
+		width: 100%;
+	}
+}

@@ -1,0 +1,151 @@
+---
+layout: post
+title:  "Списки и счетчики"
+date:   2018-02-08 22:48:52 +0300
+categories: css
+descript: "Элементы списка, счетчики, свойства CSS"
+lead: "Изучаем свойства для стилизации элементов списка"
+---
+
+<section>
+	<h2>Объявляем элемент списка</h2>
+	<p>
+		Элемент списка - любой элемент с <code class="css-rule">display: list-item;</code> или <code class="css-rule">display: inline-list-item;</code>.
+	</p>
+	<p>
+		Элемент списка генерирует псевдо-элемент <code class="css-rule">::marker</code>.
+	</p>
+	<p>
+		Дополнительно, элементы списка автоматически инкрементируют специальный счетчик элементов списка. 
+	</p>
+	<p>
+		Значение <code class="css-rule">inline-list-item</code> приводит к тому, что вычисленное значение <code class="css-rule">list-style-position</code> равно <code class="css-rule">inside</code>.
+	</p>
+</section>
+<section>
+	<h2>Свойства list-style-image и list-style-type</h2>
+	<p>
+		Содержимое псевдо-элемента <code class="css-rule">::marker</code> может генерироваться автоматически. Свойства <code class="css-rule">list-style-image</code> и <code class="css-rule">list-style-type</code> управляют тем, как это содержимое генерируется.
+	</p>
+	<p>
+		Свойство <code class="css-rule">list-style-image</code> определяет изображение, которое будет использоваться в качестве содержимого маркера по умолчанию.
+	</p>
+	<table class="css-prop-table">
+		<tr>
+			<td>Свойство</td>
+			<td>list-style-image</td>
+		</tr>
+		<tr>
+			<td>Значения</td>
+			<td><i class="tag">image</i> | none</td>
+		</tr>
+		<tr>
+			<td>По умолчанию</td>
+			<td>none</td>
+		</tr>
+		<tr>
+			<td>Применяется к </td>
+			<td>элементы списка</td>
+		</tr>
+		<tr>
+			<td>Наследуется</td>
+			<td>да</td>
+		</tr>
+	</table>
+	<p>
+		<code class="css-rule"><i class="tag">image</i></code> - если изображение валидно, оно становится содержимым маркера элемента-списка. Иначе содержимое маркера определяется <code class="css-rule">list-style-type</code>.
+	</p>
+	<p>
+		<code class="css-rule">none</code> - содержимое маркера задается свойством <code class="css-rule">list-style-type</code>.
+	</p>
+
+	<table class="css-prop-table">
+		<tr>
+			<td>Свойство</td>
+			<td>list-style-type</td>
+		</tr>
+		<tr>
+			<td>Значения</td>
+			<td><i class="tag">counter-style</i> |<i class="tag">string</i> | none</td>
+		</tr>
+		<tr>
+			<td>По умолчанию</td>
+			<td>none</td>
+		</tr>
+		<tr>
+			<td>Применяется к </td>
+			<td>элементы списка</td>
+		</tr>
+		<tr>
+			<td>Наследуется</td>
+			<td>да</td>
+		</tr>
+	</table>
+	<p>
+		<code class="css-rule"><i class="tag">counter-style</i></code> - содержимое маркера - стиль счетчика. <a href="https://www.w3.org/TR/css-counter-styles-3/">CSS Counter Styles Level 3</a>
+	</p>
+	<p>
+		<code class="css-rule"><i class="tag">string</i></code> - в качестве содержимого маркера используется строка string.
+	</p>
+	<p>
+		<code class="css-rule">none</code> - у маркера нет содержимого.
+	</p>
+</section>
+<section>
+	<h2>list-style-position</h2>
+	<p>
+		Свойство определяет позицию маркера.
+	</p>
+	<table class="css-prop-table">
+		<tr>
+			<td>Свойство</td>
+			<td>list-style-position</td>
+		</tr>
+		<tr>
+			<td>Значения</td>
+			<td>inside | outside</td>
+		</tr>
+		<tr>
+			<td>По умолчанию</td>
+			<td>none</td>
+		</tr>
+		<tr>
+			<td>Применяется к </td>
+			<td>элементы списка</td>
+		</tr>
+		<tr>
+			<td>Наследуется</td>
+			<td>да</td>
+		</tr>
+	</table>
+
+	<div class="pen-demo">
+		<p data-height="265" data-theme-id="light" data-slug-hash="yvgvBz" data-default-tab="result" data-user="coshturca" data-embed-version="2" data-pen-title="list-style-position" class="codepen">See the Pen <a href="https://codepen.io/coshturca/pen/yvgvBz/">list-style-position</a> by coshturnina (<a href="https://codepen.io/coshturca">@coshturca</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+	</div>
+</section>
+<section>
+	<h2>list-style</h2>
+
+	<table class="css-prop-table">
+		<tr>
+			<td>Свойство</td>
+			<td>list-style</td>
+		</tr>
+		<tr>
+			<td>Значения</td>
+			<td><i class="tag">list-style-type</i> || <i class="tag">list-style-position</i> || <i class="tag">list-style-image</i></td>
+		</tr>
+	</table>
+</section>
+<section>
+	<h2>Псевдо-элемент ::marker</h2>
+	<p>
+		Псевдо-элемент <code class="css-rule">::marker</code> можно стилизовать. Создается он только для элементов списка.
+	</p>
+</section>
+
+<script type="text/javascript" src={{ "jses/toc.js" | relative_url}}></script>
+<script type="text/javascript">
+	toc.setToc();
+</script>

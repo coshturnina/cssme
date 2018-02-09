@@ -1,0 +1,13 @@
+body{
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 0.825em;
+	color: #333;
+}
+
+ .tag::before{
+ 	content: "<";
+ }
+
+ .tag::after{
+ 	content: ">";
+ }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ {% include head.html %}
+<body>
+	<nav class="page-nav">
+		<ul>
+			<li><a href="{{ "/" | relative_url }}">CSSme</a></li>
+			<li><a href="#">CSS</a></li>
+			<li><a href="#">JS</a></li>
+			<li><a href="#">SVG</a></li>
+			<li><a href="#">Кейсы</a></li>
+			<li><a href="#">Эффекты</a></li>
+			<li><a href="#">Портфолио</a></li>
+		</ul>
+	</nav>
+	<main class="page-content">
+		<div class="wrapper">
+			{{ content }}
+		</div>
+	</main>
+</body>
+</html>
